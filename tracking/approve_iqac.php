@@ -1,5 +1,6 @@
 <?php include('db_connect.php');?>
 
+
 <div class="container-fluid">
 <style>
 	input[type=checkbox]
@@ -53,7 +54,7 @@
 									<th class="">Quantities Requried</th>
 									<th class="">Dept/Special</th>
 									<th class="">Requested Special Lab</th>
-									<th class="text-center">Action</th>
+									<!-- <th class="text-center">Action</th> -->
 								</tr>
 							</thead>
 							<tbody>
@@ -98,7 +99,7 @@
 										<button class="btn btn-sm btn-outline-primary edit_person" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
 										<button class="btn btn-sm btn-outline-danger delete_person" type="button" data-id="<?php echo $row['id'] ?>">Delete</button> 
 									-->
-									<center>
+									<!-- <center>
 								<div class="btn-group">
 								   <button type="button" class="btn btn-primary">Approval status</button>
 								  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -110,7 +111,7 @@
 									    <button class="btn btn-sm btn-outline-danger delete_person" type="button" data-id="<?php echo $row['id'] ?>">Reject</button>
 								  </div>
 								</div>
-								</center>	
+								</center>	 -->
 								</td>
 								</tr>
 								<?php endwhile; ?>

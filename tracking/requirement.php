@@ -1,0 +1,1 @@
+<?php include 'manage_person.php' ?>

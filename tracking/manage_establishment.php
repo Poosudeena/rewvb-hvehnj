@@ -11,11 +11,11 @@ foreach($qry->fetch_array() as $k => $val){
 	<form action="" id="manage-establishment">
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id :'' ?>">
 		<div class="form-group">
-			<label for="" class="control-label">Establishment</label>
+			<label for="" class="control-label">Staff Name</label>
 			<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Address</label>
+			<label for="" class="control-label">Services Allowed</label>
 			<textarea name="address" id="address" class="form-control" cols="30" rows="2" required><?php echo isset($address) ? $address :'' ?></textarea>
 		</div>
 	</form>

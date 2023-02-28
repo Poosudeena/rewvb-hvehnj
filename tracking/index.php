@@ -6,7 +6,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Material Tracking System</title>
- 	
+         <link rel="shortcut icon" href="images/logo.png">
+
+  <!-- <link rel="shortcut icon" href="images/logo.png"> -->
 
 <?php
 	session_start();
@@ -60,6 +62,7 @@
 </style>
 
 <body>
+<link rel="shortcut icon" href="images/logo.png">
 	<?php include 'topbar.php' ?>
 	<?php include 'navbar.php' ?>
   <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">

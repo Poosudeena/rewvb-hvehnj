@@ -19,7 +19,7 @@
 					<th class="text-center">#</th>
 					<th class="text-center">Name</th>
 					<th class="text-center">Username</th>
-					<th class="text-center">Establishment</th>
+					<th class="text-center">Services Offered</th>
 					<th class="text-center">Edit/Delete</th>
 				</tr>
 			</thead>

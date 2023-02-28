@@ -15,9 +15,9 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>M-Team Approval</b>
+						<b>Add Staff/Users</b>
 						<span class="float:right"><button class="btn btn-primary btn-block btn-sm col-sm-2 float-right" type="button" id="new_establishment">
-					<i class="fa fa-plus"></i> Add Establishment
+					<i class="fa fa-plus"></i> Add Staff/Users
 				</button></span>
 					</div>
 					<div class="card-body">
@@ -25,8 +25,8 @@
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="">Requestfrom</th>
-									<th class="">Product</th>
+									<th class="">Staff Name</th>
+									<th class="">Allowed Source</th>
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
@@ -46,9 +46,8 @@
 										 <p> <b><?php echo $row['address'] ?></b></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-outline-primary edit_establishment" type="button" data-id="<?php echo $row['id'] ?>" >Approve</button>
-										<button class="btn btn-sm btn-outline-primary edit" type="button" data-id="<?php echo $row['id'] ?>">OnHold</button>
-									    <button class="btn btn-sm btn-outline-danger delete_establishment" type="button" data-id="<?php echo $row['id'] ?>">Reject</button>
+										<button class="btn btn-sm btn-outline-primary edit_establishment" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+									    <button class="btn btn-sm btn-outline-danger delete_establishment" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
@@ -99,7 +98,7 @@
 			data:{id:$id},
 			success:function(resp){
 				if(resp==1){
-					alert_toast("Request rejected",'success')
+					alert_toast("Request successfully rejected",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)

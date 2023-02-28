@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Material Tracking System</title>
- 	
+  <link rel="shortcut icon" href="images/logo.png">
 
 <?php include('./header.php'); ?>
 <?php include('./db_connect.php'); ?>
@@ -77,7 +77,7 @@ div#login-right::before {
 
   <main id="main" class=" bg-dark">
   		<div id="login-left">
-  			<div class="logo"><span class="fa fa-search"></span></div>
+  			<div class="logo"><span class="fa fa-university"></span></div>
   		</div>
 
   		<div id="login-right">

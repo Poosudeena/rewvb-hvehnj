@@ -30,7 +30,7 @@
 						<span class="">
 
 							<!-- <button class="btn btn-primary btn-block btn-sm col-sm-2 float-right" type="button" id="new_person">
-					<i class="fa fa-plus"></i></button> -->
+					<i class="fa fa-plus"></i> Add Person</button> -->
 					<!-- <button class="btn btn-success btn-block btn-sm col-sm-2 float-right mr-2 mt-0" type="button" id="print_selected">
 					<i class="fa fa-print"></i> Print Selected</button> -->
 				</span>
@@ -40,26 +40,24 @@
 							<thead>
 								<tr>
 									<th class="text-center">
-										 <div class="form-check">	
+										 <div class="form-check">
 										  <input class="form-check-input position-static" type="checkbox" id="check_all"  aria-label="...">
 										</div>
 									</th>
 									<th class="text-center">#</th>
-									<th class="">Tracking ID</th>
 									<th class="">First Name</th>
-									<th class="">Last Name</th>
+									<th class="">last Name</th>
 									<th class="">HOD Name</th>
 									<th class="">Requried Component</th>
 									<th class="">Quantities Requried</th>
-									<th class="">Dept/Special</th>
-									<th class="">Requested Special Lab</th>
+							
 									<th class="text-center">Action</th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php 
 								$i = 1;
-								$types = $conn->query("SELECT *,concat(firstname) as name,concat(lastname) as name1,concat(hod_name) as name2, concat(RequiredComponents) as caddress , concat(QuantitiesRequired) as caddress1 , concat(Dept) as caddress2 , concat(RequestedSpecialLab) as caddress3 FROM persons where status=0 order by name asc");
+								$types = $conn->query("SELECT *,concat(firstname) as name,concat(lastname) as name1,concat(hod_name) as name2, concat(RequiredComponents) as caddress , concat(QuantitiesRequired) as caddress1 , concat(Dept) as caddress2 , concat(RequestedSpecialLab) as caddress3 FROM persons where status=1 order by name asc");
 								while($row=$types->fetch_assoc()):
 								?>
 								<tr>
@@ -68,10 +66,10 @@
 										 	<input class="form-check-input position-static input-lg" type="checkbox" name="checked[]" value="<?php echo $row['id'] ?>">
 									 	</div>
 									</th>
-									<td class="text-center"><?php echo $i++ ?></td>
-									<td class="">
+									<td class="text-center"><?php    echo $i++ ?></td>
+									<!-- <td class="">
 										 <p> <b><?php echo $row['tracking_id'] ?></b></p>
-									</td>
+									</td> -->
 									<td class="">
 										 <p> <b><?php echo ucwords($row['name']) ?></b></p>
 									</td>
@@ -87,12 +85,15 @@
 									<td class="">
 										 <p> <b><?php echo $row['caddress1'] ?></b></p>
 									</td>
-									<td class="">
+									<!-- <td class="">
+										 <p> <b><?php echo $row['caddress4'] ?></b></p>
+									</td> -->
+									<!-- <td class="">
 										 <p> <b><?php echo $row['caddress2'] ?></b></p>
 									</td>
 									<td class="">
 										 <p> <b><?php echo $row['caddress3'] ?></b></p>
-									</td>
+									</td> -->
 									<td class="text-center">
 										<!-- <button class="btn btn-sm btn-outline-primary view_person" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
 										<button class="btn btn-sm btn-outline-primary edit_person" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
@@ -105,7 +106,7 @@
 								    <span class="sr-only">Toggle Dropdown</span>
 								  </button> 
 								   <div class="dropdown-menu">
-								  <button class="btn btn-sm btn-outline-primary edit_" type="button" onclick="approve(<?php echo $row['id'] ?>,1)" data-id="<?php echo $row['id'] ?>" >Approve</button>
+								  <button class="btn btn-sm btn-outline-primary edit_" type="button" onclick="approve(<?php echo $row['id'] ?>,2)" data-id="1<?php echo $row['id'] ?>" >Approve</button>
 									
 									    <button class="btn btn-sm btn-outline-danger delete_person" type="button" data-id="<?php echo $row['id'] ?>">Reject</button>
 								  </div>
